@@ -36,19 +36,19 @@ const Input = styled.input`
 const Form = () => {
   const [company, setCompany] = useState("Manpower");
 
-  //   useEffect(() => {
-  //     const hostname = window.location.hostname;
+  useEffect(() => {
+    const hostname = window.location.hostname;
 
-  //     if (hostname.includes('manpower')) {
-  //       setCompany('Manpower');
-  //     } else if (hostname.includes('othercompany1')) {
-  //       setCompany('Other Company 1');
-  //     } else if (hostname.includes('othercompany2')) {
-  //       setCompany('Other Company 2');
-  //     } else {
-  //       setCompany('Default Company');
-  //     }
-  //   }, []);
+    if (hostname.includes('manpower')) {
+      setCompany('Manpower');
+    } else if (hostname.includes('randstad')) {
+      setCompany('Randstad');
+    } else if (hostname.includes('viguez')) {
+      setCompany('Viguez');
+    } else {
+      setCompany('Manpower');
+    }
+  }, []);
 
   const CDN = process.env.NEXT_PUBLIC_CDN_GOOGLE;
 
@@ -69,7 +69,7 @@ const Form = () => {
             type="hidden"
             id="recordType"
             name="recordType"
-            value="012Kb000000wugkIAA"
+            value="012Kb000000wujF"
           />
           <input
             type="hidden"
@@ -93,7 +93,7 @@ const Form = () => {
               size="20"
               type="text"
               className="mt-1 p-2 border rounded w-full"
-              required='true'
+              required={true}
             />
           </div>
 
@@ -111,7 +111,7 @@ const Form = () => {
               size="20"
               type="text"
               className="mt-1 p-2 border rounded w-full"
-              required='true'
+              required={true}
             />
           </div>
 
@@ -129,7 +129,7 @@ const Form = () => {
               size="20"
               type="text"
               className="mt-1 p-2 border rounded w-full"
-              required='true'
+              required={true}
             />
           </div>
 
@@ -146,7 +146,7 @@ const Form = () => {
               size="12"
               type="date"
               className="mt-1 p-2 border rounded w-full"
-              required='true'
+              required={true}
             />
           </div>
 
@@ -164,7 +164,7 @@ const Form = () => {
               size="20"
               type="text"
               className="mt-1 p-2 border rounded w-full"
-              required='true'
+              required={true}
             />
           </div>
 
@@ -182,7 +182,7 @@ const Form = () => {
               size="20"
               type="text"
               className="mt-1 p-2 border rounded w-full"
-              required='true'
+              required={true}
             />
           </div>
 
@@ -200,7 +200,7 @@ const Form = () => {
               size="20"
               type="email"
               className="mt-1 p-2 border rounded w-full"
-              required='true'
+              required={true}
             />
           </div>
 
@@ -217,7 +217,7 @@ const Form = () => {
               size="12"
               type="date"
               className="mt-1 p-2 border rounded w-full"
-              required='true'
+              required={true}
             />
           </div>
 
@@ -235,7 +235,7 @@ const Form = () => {
               size="12"
               type="time"
               className="mt-1 p-2 border rounded w-full"
-              required='true'
+              required={true}
             />
           </div>
 
@@ -252,7 +252,6 @@ const Form = () => {
               type="checkbox"
               value="1"
               className="mr-2"
-              
             />
           </div>
 
@@ -272,18 +271,6 @@ const Form = () => {
             />
           </div>
 
-          {/* <div className=",b-4">
-          <label for="recordType" className="text-gray-700 font-Poppins font-medium">
-            Tipo de registro de prospecto
-          </label>
-          <select id="recordType" name="recordType">
-            <option value="">--Ninguno--</option>
-            <option value="012Kb000000wugp">Candidato Onboarding</option>
-            <option value="012Kb000000wugk">Candidato Sales</option>
-            <option value="012Kb000000wujF">Candidato Staffing</option>
-          </select>
-        </div> */}
-
           <button
             type="submit"
             name="submit"
@@ -295,7 +282,7 @@ const Form = () => {
         <div className="mt-[55px] flex flex-col items-center">
           <div className="">
             <h1 className="font-Poppins font-bold text-[40px] text-[#5b5d71] ">
-              Candidatos <span className="text-[#95D31C]">Manpower</span>
+              Candidatos <span className="text-[#95D31C]">{company}</span>
             </h1>
 
             <h3 className="font-Poppins font-medium text-[#5b5d71] text-[20px] mt-[45px] w-[480px]">
@@ -320,22 +307,6 @@ const Form = () => {
                   />
                 </div>
               </SwiperSlide>
-              {/* <SwiperSlide>
-                <div className="mt-[-45px]   ml-[85px] hover:cursor-pointer">
-                  <img src={`${CDN}maxusx4.webp`} width={600} height={331} />
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className="mt-[-20px]  ml-[85px]  hover:cursor-pointer">
-                  <img src={`${CDN}mgzs.png`} width={600} height={331} />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="mt-[-35px]  ml-[85px] hover:cursor-pointer ">
-                  <img src={`${CDN}volter.webp`} width={500} height={331} />
-                </div>
-              </SwiperSlide> */}
             </Swiper>
           </div>
         </div>

@@ -1,9 +1,8 @@
-// components/Form.js
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
-import rutValidator from "../utils/rutValidator"; 
+import rutValidator from "../utils/rutValidator";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -14,29 +13,17 @@ import "swiper/css/pagination";
 import { EffectFade, Navigation, Autoplay, Pagination } from "swiper/modules";
 
 const Input = styled.input`
-  width: 452px;
-  height: 50px;
-  flex-shrink: 0;
   border-radius: 4px;
   border: 1px solid var(--Blanco, #fff);
   background: var(--Blanco, #fff);
-
+  padding: 15px 15px;
   /* sombra click boton */
   box-shadow: 4px 4px 14px 0px #d9d9d9 inset,
     -4px -4px 9px 0px rgba(255, 255, 255, 0.88) inset;
-  ::placeholder,
-  ::-webkit-input-placeholder {
-    color: #5b5d71;
-  }
-  :-ms-input-placeholder {
-    color: red;
-  }
-  padding-left: 15px;
+  width: 100%;
 `;
 
 const Select = styled.select`
-  width: 452px;
-  height: 50px;
   flex-shrink: 0;
   border: 1px solid var(--Blanco, #fff);
   background: var(--Blanco, #fff);
@@ -52,7 +39,6 @@ const Select = styled.select`
     color: red;
   }
   padding-left: 15px;
-
 `;
 
 const ErrorMessage = styled.p`
@@ -62,34 +48,45 @@ const ErrorMessage = styled.p`
 `;
 
 const comunasDeSantiago = [
-  "Cerrillos", "Cerro Navia", "Conchalí", "El Bosque", "Estación Central",
-  "Huechuraba", "Independencia", "La Cisterna", "La Florida", "La Granja",
-  "La Pintana", "La Reina", "Las Condes", "Lo Barnechea", "Lo Espejo",
-  "Lo Prado", "Macul", "Maipú", "Ñuñoa", "Pedro Aguirre Cerda", "Peñalolén",
-  "Providencia", "Pudahuel", "Quilicura", "Quinta Normal", "Recoleta",
-  "Renca", "San Joaquín", "San Miguel", "San Ramón", "Santiago",
-  "Vitacura"
+  "Cerrillos",
+  "Cerro Navia",
+  "Conchalí",
+  "El Bosque",
+  "Estación Central",
+  "Huechuraba",
+  "Independencia",
+  "La Cisterna",
+  "La Florida",
+  "La Granja",
+  "La Pintana",
+  "La Reina",
+  "Las Condes",
+  "Lo Barnechea",
+  "Lo Espejo",
+  "Lo Prado",
+  "Macul",
+  "Maipú",
+  "Ñuñoa",
+  "Pedro Aguirre Cerda",
+  "Peñalolén",
+  "Providencia",
+  "Pudahuel",
+  "Quilicura",
+  "Quinta Normal",
+  "Recoleta",
+  "Renca",
+  "San Joaquín",
+  "San Miguel",
+  "San Ramón",
+  "Santiago",
+  "Vitacura",
 ];
 
-const Form = () => {
+function Inicio() {
   const [company, setCompany] = useState("Manpower");
   const [rut, setRut] = useState("");
   const [rutError, setRutError] = useState(false);
   const [timeError, setTimeError] = useState(false);
-
-  useEffect(() => {
-    const hostname = window.location.hostname;
-
-    if (hostname.includes("manpower")) {
-      setCompany("Manpower");
-    } else if (hostname.includes("randstad")) {
-      setCompany("Randstad");
-    } else if (hostname.includes("viguez")) {
-      setCompany("Viguez");
-    } else {
-      setCompany("Manpower");
-    }
-  }, []);
 
   const handleRutChange = (e) => {
     const formattedRut = formatRut(e.target.value);
@@ -137,7 +134,7 @@ const Form = () => {
       <Head>
         <meta httpEquiv="Content-type" content="text/html; charset=UTF-8" />
       </Head>
-      <div className="flex justify-center tucar-container pt-[200px]">
+      <div className="flex flex-col-reverse  justify-center tucar-container pt-[100px]">
         <form
           action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DKb000000OlrI"
           method="POST"
@@ -317,7 +314,7 @@ const Form = () => {
             />
           </div>
 
-          <div className="mb-4">
+          <div className="mb-4 flex flex-col gap-y-[25px]">
             <label
               htmlFor="00NKb00000DRKZ8"
               className="block text-gray-700 font-Poppins font-medium"
@@ -336,7 +333,12 @@ const Form = () => {
               max="15:00"
               onChange={handleTimeChange}
             />
-            {timeError && <ErrorMessage>Hora inválida (10:30 - 15:00)</ErrorMessage>}
+            {timeError && (
+              <ErrorMessage>Hora inválida (10:30 - 15:00)</ErrorMessage>
+            )}
+            <p className="font-Poppins font-medium text-[#5b5d71]">
+              Horario disponible de 10:30 a 15:00
+            </p>
           </div>
 
           <div className="mb-4">
@@ -381,12 +383,14 @@ const Form = () => {
         </form>
         <div className="mt-[55px] flex flex-col items-center">
           <div className="">
-            <h1 className="font-Poppins font-bold text-[40px] text-[#5b5d71] ">
+            <h1 className="font-Poppins font-bold text-[22px] text-center text-[#5b5d71] ">
               Candidatos <span className="text-[#95D31C]">{company}</span>
             </h1>
 
-            <h3 className="font-Poppins font-medium text-[#5b5d71] text-[20px] mt-[25px] w-[480px]">
-            <ul className="list-disc mx-5">
+            <h3 className="font-Poppins font-medium text-[#5b5d71] text-[14px] mt-[25px] flex-col gap-y-[15px] ">
+              <span>Recuerda que los requisitos son:</span>
+              {/* tico mir */}
+              <ul className="list-disc mx-5">
                 <li>+23 años.</li>
                 <li>Región metropolitana.</li>
                 <li>En caso de tener cuenta uber, que este activa</li>
@@ -394,29 +398,25 @@ const Form = () => {
             </h3>
           </div>
           <div className="mt-[45px]">
-            <Swiper
-              spaceBetween={60}
-              autoplay={{ delay: 1500, disableOnInteraction: false }}
-              modules={[Autoplay]}
-              className="mySwiper  w-[650px] "
-              allowTouchMov="none"
-            >
-              <SwiperSlide>
-                <div className="mt-[2px]   ml-[85px] hover:cursor-pointer">
-                  <img
-                    src="nirox4shadow.png"
-                    className="asolute"
-                    width={580}
-                    height={331}
-                  />
-                </div>
-              </SwiperSlide>
-            </Swiper>
+            <img src="nirox4shadow.png" className="" width={580} height={331} />
+            {/* <Swiper
+            spaceBetween={60}
+            autoplay={{ delay: 1500, disableOnInteraction: false }}
+            modules={[Autoplay]}
+            className="mySwiper  w-[300px] "
+            allowTouchMov="none"
+          >
+            <SwiperSlide>
+              <div className="mt-[2px]   ml-[85px] hover:cursor-pointer">
+                
+              </div>
+            </SwiperSlide>
+          </Swiper> */}
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
-export default Form;
+export default Inicio;

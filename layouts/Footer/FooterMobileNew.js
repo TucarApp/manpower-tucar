@@ -97,40 +97,40 @@ function FooterMobileNew({ variant = MODE.light, dark }) {
                   <AccordionPanel pb={4}>
                     <div className="flex flex-col gap-y-[15px] mt-[20px] font-Poppins font-medium">
                       <div>
-                        <Link href="/como-funciona">
+                        <a href="https://tucar.app/como-funciona">
                           <p className="text-[#5b5d71] hover:cursor-pointer">
                             ¿Cómo funciona?
                           </p>
-                        </Link>
+                        </a>
                       </div>
                       <div>
-                        <Link href="/por-que-tucar">
+                        <a href="https://tucar.app/por-que-tucar">
                           <p className="text-[#5b5d71] hover:cursor-pointer">
                             ¿Por qué tucar?
                           </p>
-                        </Link>
+                        </a>
                       </div>
                       <div>
-                        <Link href="/driver-app">
+                        <a href="https://tucar.app/driver-app">
                           <p className="text-[#5b5d71] hover:cursor-pointer">
                             Driver App
                           </p>
-                        </Link>
+                        </a>
                       </div>
                       <div>
-                        <Link href="/requisitos">
+                        <a href="https://tucar.app/requisitos">
                           <p className="text-[#5b5d71] hover:cursor-pointer">
                             Requisitos
                           </p>
-                        </Link>
+                        </a>
                       </div>
 
                       <div>
-                        <Link href="/beneficios">
+                        <a href="https://tucar.app/beneficios">
                           <p className="text-[#5b5d71] hover:cursor-pointer">
                             Beneficios
                           </p>
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </AccordionPanel>
@@ -158,25 +158,25 @@ function FooterMobileNew({ variant = MODE.light, dark }) {
                   <AccordionPanel pb={4}>
                     <div className="flex flex-col gap-y-[15px] mt-[20px] font-Poppins font-medium">
                     <div>
-                        <Link href="/precios">
+                        <a href="https://tucar.app/precios">
                           <p className="text-[#5b5d71] hover:cursor-pointer">
                             Precios
                           </p>
-                        </Link>
+                        </a>
                       </div>
                       <div>
-                        <Link href="/plan-premium">
+                        <a href="https://tucar.app/plan-premium">
                           <p className="text-[#5b5d71] hover:cursor-pointer">
                             Plan eléctrico Premium
                           </p>
-                        </Link>
+                        </a>
                       </div>
                       <div>
-                        <Link href="/plan-plus">
+                        <a href="https://tucar.app/plan-plus">
                           <p className="text-[#5b5d71] hover:cursor-pointer">
                             Plan eléctrico Plus
                           </p>
-                        </Link>
+                        </a>
                       </div>
                       {/* <div>
                       <Link href="/beneficios">
@@ -210,26 +210,26 @@ function FooterMobileNew({ variant = MODE.light, dark }) {
                   <AccordionPanel pb={4}>
                     <div className="flex flex-col gap-y-[15px] mt-[20px] font-Poppins font-medium">
                       <div>
-                        <Link href="/terminos-condiciones">
+                        <a href="https://tucar.app/terminos-condiciones">
                           <p className="text-[#5b5d71] hover:cursor-pointer">
                             Términos de servicio
                           </p>
-                        </Link>
+                        </a>
                       </div>
 
                       <div>
-                        <Link href="/preguntas-frecuentes">
+                        <a href="https://tucar.app/preguntas-frecuentes">
                           <p className="text-[#5b5d71] hover:cursor-pointer">
                             Preguntas frecuentes
                           </p>
-                        </Link>
+                        </a>
                       </div>
                       <div>
-                        <Link href="/contacto">
+                        <a href="https://tucar.app/contacto">
                           <p className="text-[#5b5d71] hover:cursor-pointer">
                             Contacto
                           </p>
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </AccordionPanel>

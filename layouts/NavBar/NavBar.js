@@ -224,7 +224,7 @@ function NavBar({ variant = MODE.light, dark }) {
                                   </a>
                                 </div> */}
                                 <div className="mt-[15px]">
-                                  <Link href="/como-funciona">
+                                  <a href="https://tucar.app/como-funciona">
                                     {/* <a href={`${url}/plan-premium`}> */}
                                     <div className="flex gap-[20px]">
                                       <BoltIcon sx={{ color: "#0057b8" }} />
@@ -235,10 +235,10 @@ function NavBar({ variant = MODE.light, dark }) {
                                       </div>
                                     </div>
                                     {/* </a> */}
-                                  </Link>
+                                  </a>
                                 </div>
                                 <div className="mt-[15px]">
-                                  <Link href="/por-que-tucar">
+                                  <a href="https://tucar.app/por-que-tucar">
                                     {/* <a href={`${url}/plan-premium`}> */}
                                     <div className="flex gap-[20px]">
                                       <BoltIcon sx={{ color: "#0057b8" }} />
@@ -249,10 +249,10 @@ function NavBar({ variant = MODE.light, dark }) {
                                       </div>
                                     </div>
                                     {/* </a> */}
-                                  </Link>
+                                  </a>
                                 </div>
                                 <div className="mt-[15px]">
-                                  <Link href="/requisitos">
+                                  <a href="https://tucar.app/requisitos">
                                     {/* <a href={`${url}/plan-plus`} > */}
                                     <div className="flex gap-[20px]">
                                       <BoltIcon sx={{ color: "#0057b8" }} />
@@ -263,10 +263,10 @@ function NavBar({ variant = MODE.light, dark }) {
                                       </div>
                                     </div>
                                     {/* </a> */}
-                                  </Link>
+                                  </a>
                                 </div>
                                 <div className="mt-[15px]">
-                                  <Link href="/beneficios">
+                                  <a href="https://tucar.app/beneficios">
                                     {/* <a href={`${url}/plan-plus`} > */}
                                     <div className="flex gap-[20px]">
                                       <BoltIcon sx={{ color: "#0057b8" }} />
@@ -277,10 +277,10 @@ function NavBar({ variant = MODE.light, dark }) {
                                       </div>
                                     </div>
                                     {/* </a> */}
-                                  </Link>
+                                  </a>
                                 </div>
                                 <div className="mt-[15px]">
-                                  <Link href="/driver-app">
+                                  <a href="https://tucar.app/driver-app">
                                     {/* <a href={`${url}/plan-plus`} > */}
                                     <div className="flex gap-[20px]">
                                       <AppsIcon sx={{ color: "#0057b8" }} />
@@ -291,7 +291,7 @@ function NavBar({ variant = MODE.light, dark }) {
                                       </div>
                                     </div>
                              
-                                  </Link>
+                                  </a>
                                 </div>
 
                                 {/* <div className="mt-[15px]">
@@ -343,7 +343,7 @@ function NavBar({ variant = MODE.light, dark }) {
                             />
                             <div className="flex flex-col px-[20px] py-[25px]">
                               <div className="flex flex-col text-[#333] text-[14px] font-Poppins whitespace-nowrap">
-                                <Link href="/precios">
+                                <a href="https://tucar.app/precios">
                                  
                                     <div className="flex gap-[20px]">
                                       <MonetizationOnIcon
@@ -361,9 +361,9 @@ function NavBar({ variant = MODE.light, dark }) {
                                       </div>
                                     </div>
                                 
-                                </Link>
+                                </a>
                                 <div className="mt-[15px]">
-                                  <Link href="/plan-premium">
+                                  <a href="https://tucar.app/plan-premium">
                                     {/* <a href={`${url}/plan-premium`}> */}
                                     <div className="flex gap-[20px]">
                                       <BoltIcon sx={{ color: "#0057b8" }} />
@@ -378,10 +378,10 @@ function NavBar({ variant = MODE.light, dark }) {
                                       </div>
                                     </div>
                                     {/* </a> */}
-                                  </Link>
+                                  </a>
                                 </div>
                                 <div className="mt-[15px]">
-                                  <Link href="/plan-plus">
+                                  <a href="https://tucar.app/plan-plus">
                                     {/* <a href={`${url}/plan-plus`} > */}
                                     <div className="flex gap-[20px]">
                                       <BoltIcon sx={{ color: "#0057b8" }} />
@@ -396,7 +396,7 @@ function NavBar({ variant = MODE.light, dark }) {
                                       </div>
                                     </div>
                                     {/* </a> */}
-                                  </Link>
+                                  </a>
                                 </div>
                                 {/* <div className="mt-[15px]">
                                   <a href="https://referidos.tucar.app">
@@ -473,7 +473,7 @@ function NavBar({ variant = MODE.light, dark }) {
                             <div className="flex flex-col px-[25px] py-[20px]">
                               <div className="flex flex-col text-[#333] text-[14px] font-Poppins whitespace-nowrap">
                                 <div className="mt-[15px]">
-                                  <Link href="/terminos-condiciones">
+                                  <a href="https://tucar.app/terminos-condiciones">
                                     <a>
                                       <div className="flex gap-[20px]">
                                         <VerifiedUserIcon
@@ -486,11 +486,11 @@ function NavBar({ variant = MODE.light, dark }) {
                                         </div>
                                       </div>
                                     </a>
-                                  </Link>
+                                  </a>
                                 </div>
                                 <div className="mt-[15px]">
-                                  <Link href="/preguntas-frecuentes">
-                                    <a>
+                                  <a href="https://tucar.app/preguntas-frecuentes">
+                                   
                                       <div className="flex gap-[20px]">
                                         <LiveHelpIcon
                                           sx={{ color: "#0057b8" }}
@@ -501,8 +501,8 @@ function NavBar({ variant = MODE.light, dark }) {
                                           </p>
                                         </div>
                                       </div>
-                                    </a>
-                                  </Link>
+                                   
+                                  </a>
                                 </div>
                                 {/* <div className="mt-[15px]">
                                   <Link href="/driver-app">
@@ -533,7 +533,7 @@ function NavBar({ variant = MODE.light, dark }) {
                                 
 
                                 <div className="mt-[15px] mb-[12px]">
-                                  <Link href="/contacto">
+                                  <a href="https://tucar.app/contacto">
                                     <div className="flex gap-[20px]">
                                       <PhoneIcon sx={{ color: "#0057b8" }} />
                                       <div className="flex flex-col">
@@ -542,7 +542,7 @@ function NavBar({ variant = MODE.light, dark }) {
                                         </p>
                                       </div>
                                     </div>
-                                  </Link>
+                                  </a>
                                 </div>
                               </div>
                             </div>
@@ -752,21 +752,21 @@ function NavBar({ variant = MODE.light, dark }) {
                               onClick={() => setIsOpen(false)}
                             >
                              
-                              <Link href="/como-funciona">
+                              <a href="https://tucar.app/como-funciona">
                                 <li className="py-1">¿Cómo funciona?</li>
-                              </Link>
-                              <Link href="/por-que-tucar">
+                              </a>
+                              <a href="https://tucar.app/por-que-tucar">
                                 <li className="py-1">¿Por qué Tucar?</li>
-                              </Link>
-                              <Link href="/requisitos" rel="noreferrer">
+                              </a>
+                              <a href="https://tucar.app/requisitos" rel="noreferrer">
                                 <li className="py-1">Requisitos</li>
-                              </Link>
-                              <Link href="/beneficios" rel="noreferrer">
+                              </a>
+                              <a href="https://tucar.app/beneficios" rel="noreferrer">
                                 <li className="py-1">Beneficios</li>
-                              </Link>
-                              <Link href="/driver-app" rel="noreferrer">
+                              </a>
+                              <a href="https://tucar.app/driver-app" rel="noreferrer">
                                 <li className="py-1">Driver App</li>
-                              </Link>
+                              </a>
 
                               {/* <Link href="/plan-standard" rel="noreferrer">
                                 <li className="py-1">
@@ -807,15 +807,15 @@ function NavBar({ variant = MODE.light, dark }) {
                               className="list-disc font-Poppins font-light text-[14px] mt-[5px]"
                               onClick={() => setIsOpen(false)}
                             >
-                              <Link href='/precios' rel="noreferrer">
+                              <a href='https://tucar.app/precios' rel="noreferrer">
                                 <li className="py-1">Precios</li>
-                              </Link>
-                              <Link href="/plan-premium">
+                              </a>
+                              <a href="https://tucar.app/plan-premium">
                                 <li className="py-1">Plán Eléctrico Premium</li>
-                              </Link>
-                              <Link href="/plan-plus" rel="noreferrer">
+                              </a>
+                              <a href="https://tucar.app/plan-plus" rel="noreferrer">
                                 <li className="py-1">Plán Eléctrico Plus</li>
-                              </Link>
+                              </a>
                               {/* <Link href="/plan-standard" rel="noreferrer">
                                 <li className="py-1">
                                   Plán Combustión Standard
@@ -850,23 +850,23 @@ function NavBar({ variant = MODE.light, dark }) {
                         <div className="py-2 ">
                           <div className="mx-5">
                             <ul className="list-disc font-Poppins font-light text-[14px]">
-                              <Link href="/terminos-condiciones">
+                              <a href="https://tucar.app/terminos-condiciones">
                                 <li className="py-1">Términos de Servicio</li>
-                              </Link>
-                              <Link href='/preguntas-frecuentes'>
-                              <a href='preguntas-frecuentes'>
-                                <li className="py-1">Preguntas Frecuentes</li>
                               </a>
-                              </Link>
+                              <a href='https://tucar.app/preguntas-frecuentes'>
+                             
+                                <li className="py-1">Preguntas Frecuentes</li>
+                             
+                              </a>
                               {/* <a href='politica-de-privacidad'>
                                 <li className="py-1">Política de privacidad</li>
                               </a> */}
-                              {/* <Link href="/driver-app">
+                              {/* <a href="/driver-app">
                                 <li className="py-1">Driver App</li>
-                              </Link> */}
-                              <Link href="/contacto">
+                              </a> */}
+                              <a href="https://tucar.app/contacto">
                                 <li className="py-1">Contacto</li>
-                              </Link>
+                              </a>
                             </ul>
                           </div>
                         </div>

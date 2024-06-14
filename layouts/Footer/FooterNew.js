@@ -3,17 +3,16 @@ import LogoTucar from "../../images/LogoTucar";
 import Link from "next/link";
 import { MODE } from "../../consts/index";
 import { IcBaselineTiktok } from "./TikTok";
-import Edificios from './Edificios'
+import Edificios from "./Edificios";
 
 function FooterNew({ variant = MODE.light, dark }) {
   const isLight = variant === MODE.dark;
 
-  const CDN = process.env.NEXT_PUBLIC_CDN_GOOGLE
+  const CDN = process.env.NEXT_PUBLIC_CDN_GOOGLE;
 
   return (
     <div className="mt-[150px]">
-    <Edificios />
-      {" "}
+      <Edificios />{" "}
       <div className="mt-[150px] mb-[30px] ml-[45px] ">
         <div className="grid  grid-cols-4 gap-x-[60px] justify-center ml-4">
           <div className="flex flex-col  ">
@@ -73,82 +72,62 @@ function FooterNew({ variant = MODE.light, dark }) {
               Sobre nosotros
             </p>
 
-            <Link href="/por-que-tucar">
-              <a>
-                <p className=" text-[#5B5D71] text-[20px] font-Poppins font-medium hover:cursor-pointer">
-                  ¿Por qué Tucar?
-                </p>
-              </a>
-            </Link>
-            <Link href="/como-funciona">
-              <a>
-                <p className=" text-[#5B5D71] text-[20px] font-Poppins font-medium hover:cursor-pointer">
-                  Cómo funciona
-                </p>
-              </a>
-            </Link>
-            <Link href="/terminos-condiciones">
-              <a>
-                <p className=" text-[#5B5D71] text-[20px] font-Poppins font-medium hover:cursor-pointer">
-                  Términos y condiciones
-                </p>
-              </a>
-            </Link>
-            <Link href="/driver-app">
-              <a>
-                <p className=" text-[#5B5D71] text-[20px] font-Poppins font-medium hover:cursor-pointer">
-                  Driver App
-                </p>
-              </a>
-            </Link>
-            <Link href="/preguntas-frecuentes">
-              <a>
-                <p className=" text-[#5B5D71] text-[20px] font-Poppins font-medium ">
-                  Preguntas frecuentes
-                </p>
-              </a>
-            </Link>
-            <Link href="/politica-de-privacidad">
-              <a>
-                <p className=" text-[#5B5D71] text-[20px] font-Poppins font-medium ">
-                  Política de privacidad
-                </p>
-              </a>
-            </Link>
+            <a href="https://tucar.app/por-que-tucar">
+              <p className=" text-[#5B5D71] text-[20px] font-Poppins font-medium hover:cursor-pointer">
+                ¿Por qué Tucar?
+              </p>
+            </a>
+            <a href="https://tucar.app/como-funciona">
+              <p className=" text-[#5B5D71] text-[20px] font-Poppins font-medium hover:cursor-pointer">
+                Cómo funciona
+              </p>
+            </a>
+            <a href="https://tucar.app/terminos-condiciones">
+              <p className=" text-[#5B5D71] text-[20px] font-Poppins font-medium hover:cursor-pointer">
+                Términos y condiciones
+              </p>
+            </a>
+            <a href="https://tucar.app/driver-app">
+              <p className=" text-[#5B5D71] text-[20px] font-Poppins font-medium hover:cursor-pointer">
+                Driver App
+              </p>
+            </a>
+            <a href="https://tucar.app/preguntas-frecuentes">
+              <p className=" text-[#5B5D71] text-[20px] font-Poppins font-medium ">
+                Preguntas frecuentes
+              </p>
+            </a>
+            <a href="https://tucar.app/politica-de-privacidad">
+              <p className=" text-[#5B5D71] text-[20px] font-Poppins font-medium ">
+                Política de privacidad
+              </p>
+            </a>
           </div>
 
           <div className="flex flex-col gap-y-[20px]">
             <p className="text-[20px]  font-medium text-[#0057b8] font-Poppins">
               Planes
             </p>
-            <Link href="/precios">
-              <a>
-                <p className=" text-[#5B5D71] text-[20px] font-medium font-Poppins hover">
-                  Precios
-                </p>
-              </a>
-            </Link>
-            <Link href="/plan-premium">
-              <a>
-                <p className=" text-[#5B5D71] text-[20px] font-medium font-Poppins hover">
-                  Plan Eléctrico Premium
-                </p>
-              </a>
-            </Link>
-            <Link href="/plan-plus">
-              <a>
-                <p className=" text-[#5B5D71] text-[20px] font-medium font-Poppins">
-                  Plan Eléctrico Plus
-                </p>
-              </a>
-            </Link>
-            <Link href="/beneficios">
-              <a>
-                <p className=" text-[#5B5D71] text-[20px] font-medium font-Poppins">
-                  Beneficios
-                </p>
-              </a>
-            </Link>
+            <a href="https://tucar.app/precios">
+              <p className=" text-[#5B5D71] text-[20px] font-medium font-Poppins hover">
+                Precios
+              </p>
+            </a>
+            <a href="https://tucar.app/plan-premium">
+              <p className=" text-[#5B5D71] text-[20px] font-medium font-Poppins hover">
+                Plan Eléctrico Premium
+              </p>
+            </a>
+            <a href="https://tucar.app/plan-plus">
+              <p className=" text-[#5B5D71] text-[20px] font-medium font-Poppins">
+                Plan Eléctrico Plus
+              </p>
+            </a>
+            <a href="https://tucar.app/beneficios">
+              <p className=" text-[#5B5D71] text-[20px] font-medium font-Poppins">
+                Beneficios
+              </p>
+            </a>
             <a
               href="https://driver.tucar.app/#/signup"
               target="_blank"
@@ -159,13 +138,11 @@ function FooterNew({ variant = MODE.light, dark }) {
               </p>
             </a>
 
-            <Link href="/requisitos">
-              <a>
-                <p className=" text-[#5B5D71] text-[20px] font-medium font-Poppins">
-                  Requisitos
-                </p>
-              </a>
-            </Link>
+            <a href="/requisitos">
+              <p className=" text-[#5B5D71] text-[20px] font-medium font-Poppins">
+                Requisitos
+              </p>
+            </a>
             {/* <Link href="/puntos-carga">
             <a>
               <p className=" text-[#5B5D71] text-[20px] font-medium font-Poppins">
@@ -175,13 +152,11 @@ function FooterNew({ variant = MODE.light, dark }) {
           </Link> */}
           </div>
           <div className="flex flex-col gap-y-[20px]">
-            <Link href="/contacto">
-              <a>
-                <p className="text-[20px] font-Poppins font-medium text-[#0057b8] w-[86px]">
-                  Contacto
-                </p>
-              </a>
-            </Link>
+            <a href="https://tucar.app/contacto">
+              <p className="text-[20px] font-Poppins font-medium text-[#0057b8] w-[86px]">
+                Contacto
+              </p>
+            </a>
 
             <a
               href="mailto:contacto@tucar.app"

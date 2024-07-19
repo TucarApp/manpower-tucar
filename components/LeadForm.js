@@ -42,7 +42,7 @@ function LeadForm() {
           <div className="">
             <h1 className="font-Poppins font-bold text-[40px] text-[#5b5d71] ">
               Candidatos {' '}
-              <span className="text-[#95D31C]">Manpower</span>
+              <span className="text-[#95D31C]">ATCOM</span>
             </h1>
 
             <h3 className="font-Poppins font-medium text-[#5b5d71] text-[20px] mt-[45px] w-[480px]">

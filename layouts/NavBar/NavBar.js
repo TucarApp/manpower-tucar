@@ -107,8 +107,8 @@ function NavBar({ variant = MODE.light, dark }) {
   ) {
     defaultIndex = [0];
   } else if (
-    currentPath === "/plan-premium" ||
-    currentPath === "/plan-plus" ||
+    currentPath === "/plan-compartido" ||
+    currentPath === "/plan-carga-nocturna" ||
     currentPath === "/precios"
   ) {
     defaultIndex = [1];
@@ -225,7 +225,7 @@ function NavBar({ variant = MODE.light, dark }) {
                                 </div> */}
                                 <div className="mt-[15px]">
                                   <a href="https://tucar.app/como-funciona">
-                                    {/* <a href={`${url}/plan-premium`}> */}
+                                    {/* <a href={`${url}/plan-compartido`}> */}
                                     <div className="flex gap-[20px]">
                                       <BoltIcon sx={{ color: "#0057b8" }} />
                                       <div className="flex flex-col">
@@ -239,7 +239,7 @@ function NavBar({ variant = MODE.light, dark }) {
                                 </div>
                                 <div className="mt-[15px]">
                                   <a href="https://tucar.app/por-que-tucar">
-                                    {/* <a href={`${url}/plan-premium`}> */}
+                                    {/* <a href={`${url}/plan-compartido`}> */}
                                     <div className="flex gap-[20px]">
                                       <BoltIcon sx={{ color: "#0057b8" }} />
                                       <div className="flex flex-col">
@@ -253,7 +253,7 @@ function NavBar({ variant = MODE.light, dark }) {
                                 </div>
                                 <div className="mt-[15px]">
                                   <a href="https://tucar.app/requisitos">
-                                    {/* <a href={`${url}/plan-plus`} > */}
+                                    {/* <a href={`${url}/plan-carga-nocturna`} > */}
                                     <div className="flex gap-[20px]">
                                       <BoltIcon sx={{ color: "#0057b8" }} />
                                       <div className="flex flex-col">
@@ -267,7 +267,7 @@ function NavBar({ variant = MODE.light, dark }) {
                                 </div>
                                 <div className="mt-[15px]">
                                   <a href="https://tucar.app/beneficios">
-                                    {/* <a href={`${url}/plan-plus`} > */}
+                                    {/* <a href={`${url}/plan-carga-nocturna`} > */}
                                     <div className="flex gap-[20px]">
                                       <BoltIcon sx={{ color: "#0057b8" }} />
                                       <div className="flex flex-col">
@@ -281,7 +281,7 @@ function NavBar({ variant = MODE.light, dark }) {
                                 </div>
                                 <div className="mt-[15px]">
                                   <a href="https://tucar.app/driver-app">
-                                    {/* <a href={`${url}/plan-plus`} > */}
+                                    {/* <a href={`${url}/plan-carga-nocturna`} > */}
                                     <div className="flex gap-[20px]">
                                       <AppsIcon sx={{ color: "#0057b8" }} />
                                       <div className="flex flex-col">
@@ -363,17 +363,16 @@ function NavBar({ variant = MODE.light, dark }) {
                                 
                                 </a>
                                 <div className="mt-[15px]">
-                                  <a href="https://tucar.app/plan-premium">
-                                    {/* <a href={`${url}/plan-premium`}> */}
+                                  <a href="https://tucar.app/plan-compartido">
+                                    {/* <a href={`${url}/plan-compartido`}> */}
                                     <div className="flex gap-[20px]">
                                       <BoltIcon sx={{ color: "#0057b8" }} />
                                       <div className="flex flex-col">
                                         <p className="block font-medium hover:text-[#6cc8dd] pb-[5px] hover:cursor-pointer">
-                                          Plan Eléctrico Premium
+                                          Plan Compartido
                                         </p>
                                         <p className="font-Poppins font-light text-[14px] ">
-                                          Conoce todo sobre el Plan Eléctrico
-                                          Premium.
+                                          Conoce todo sobre el Plan compartido.
                                         </p>
                                       </div>
                                     </div>
@@ -381,17 +380,16 @@ function NavBar({ variant = MODE.light, dark }) {
                                   </a>
                                 </div>
                                 <div className="mt-[15px]">
-                                  <a href="https://tucar.app/plan-plus">
-                                    {/* <a href={`${url}/plan-plus`} > */}
+                                  <a href="https://tucar.app/plan-carga-nocturna">
+                                    {/* <a href={`${url}/plan-carga-nocturna`} > */}
                                     <div className="flex gap-[20px]">
                                       <BoltIcon sx={{ color: "#0057b8" }} />
                                       <div className="flex flex-col">
                                         <p className="block font-medium hover:text-[#6cc8dd] pb-[5px] hover:cursor-pointer">
-                                          Plan Eléctrico Plus
+                                          Plan Carga Nocturna
                                         </p>
                                         <p className="font-Poppins font-light text-[14px] ">
-                                          Conoce todo sobre el Plan Eléctrico
-                                          Plus.
+                                          Conoce todo sobre el Plan Carga nocturna.
                                         </p>
                                       </div>
                                     </div>
@@ -714,10 +712,10 @@ function NavBar({ variant = MODE.light, dark }) {
                       <Link href="/precios" rel="noreferrer">
                         <li className="py-1">Precios</li>
                       </Link>
-                      <Link href="/plan-premium" rel="noreferrer">
+                      <Link href="/plan-compartido" rel="noreferrer">
                         <li className="py-1">Plán Eléctrico Premium</li>
                       </Link>
-                      <Link href="/plan-plus" rel="noreferrer">
+                      <Link href="/plan-carga-nocturna" rel="noreferrer">
                         <li className="py-1">Plán Eléctrico Plus</li>
                       </Link>
                       <Link href="/plan-standard" rel="noreferrer">
@@ -810,11 +808,11 @@ function NavBar({ variant = MODE.light, dark }) {
                               <a href='https://tucar.app/precios' rel="noreferrer">
                                 <li className="py-1">Precios</li>
                               </a>
-                              <a href="https://tucar.app/plan-premium">
-                                <li className="py-1">Plán Eléctrico Premium</li>
+                              <a href="https://tucar.app/plan-compartido">
+                                <li className="py-1">Plan Compartido</li>
                               </a>
-                              <a href="https://tucar.app/plan-plus" rel="noreferrer">
-                                <li className="py-1">Plán Eléctrico Plus</li>
+                              <a href="https://tucar.app/plan-carga-nocturna" rel="noreferrer">
+                                <li className="py-1">Plan Carga Nocturna</li>
                               </a>
                               {/* <Link href="/plan-standard" rel="noreferrer">
                                 <li className="py-1">
@@ -853,10 +851,8 @@ function NavBar({ variant = MODE.light, dark }) {
                               <a href="https://tucar.app/terminos-condiciones">
                                 <li className="py-1">Términos de Servicio</li>
                               </a>
-                              <a href='https://tucar.app/preguntas-frecuentes'>
-                             
-                                <li className="py-1">Preguntas Frecuentes</li>
-                             
+                              <a href='https://tucar.app/preguntas-frecuentes'>                             
+                                <li className="py-1">Preguntas Frecuentes</li>                           
                               </a>
                               {/* <a href='politica-de-privacidad'>
                                 <li className="py-1">Política de privacidad</li>

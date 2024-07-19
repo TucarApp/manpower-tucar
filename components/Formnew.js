@@ -20,18 +20,12 @@ const Input = styled.input`
   border-radius: 4px;
   border: 1px solid var(--Blanco, #fff);
   background: var(--Blanco, #fff);
-
-  /* sombra click boton */
-  box-shadow: 4px 4px 14px 0px #d9d9d9 inset,
-    -4px -4px 9px 0px rgba(255, 255, 255, 0.88) inset;
-  ::placeholder,
-  ::-webkit-input-placeholder {
+  box-shadow: 4px 4px 14px 0px #d9d9d9 inset, -4px -4px 9px 0px rgba(255, 255, 255, 0.88) inset;
+  ::placeholder {
     color: #5b5d71;
   }
-  :-ms-input-placeholder {
-    color: red;
-  }
   padding-left: 15px;
+  
 `;
 
 const Select = styled.select`
@@ -40,19 +34,11 @@ const Select = styled.select`
   flex-shrink: 0;
   border: 1px solid var(--Blanco, #fff);
   background: var(--Blanco, #fff);
-
-  /* sombra click boton */
-  box-shadow: 4px 4px 14px 0px #d9d9d9 inset,
-    -4px -4px 9px 0px rgba(255, 255, 255, 0.88) inset;
-  ::placeholder,
-  ::-webkit-input-placeholder {
+  box-shadow: 4px 4px 14px 0px #d9d9d9 inset, -4px -4px 9px 0px rgba(255, 255, 255, 0.88) inset;
+  ::placeholder {
     color: #5b5d71;
   }
-  :-ms-input-placeholder {
-    color: red;
-  }
   padding-left: 15px;
-
 `;
 
 const ErrorMessage = styled.p`
@@ -62,34 +48,71 @@ const ErrorMessage = styled.p`
 `;
 
 const comunasDeSantiago = [
-  "Cerrillos", "Cerro Navia", "Conchalí", "El Bosque", "Estación Central",
-  "Huechuraba", "Independencia", "La Cisterna", "La Florida", "La Granja",
-  "La Pintana", "La Reina", "Las Condes", "Lo Barnechea", "Lo Espejo",
-  "Lo Prado", "Macul", "Maipú", "Ñuñoa", "Pedro Aguirre Cerda", "Peñalolén",
-  "Providencia", "Pudahuel", "Quilicura", "Quinta Normal", "Recoleta",
-  "Renca", "San Joaquín", "San Miguel", "San Ramón", "Santiago",
-  "Vitacura"
+  "Santiago",
+  "Cerrillos",
+  "Cerro Navia",
+  "Conchalí",
+  "El Bosque",
+  "Estación Central",
+  "Huechuraba",
+  "Independencia",
+  "La Cisterna",
+  "La Florida",
+  "La Granja",
+  "La Pintana",
+  "La Reina",
+  "Las Condes",
+  "Lo Barnechea",
+  "Lo Espejo",
+  "Lo Prado",
+  "Macul",
+  "Maipú",
+  "Ñuñoa",
+  "Pedro Aguirre Cerda",
+  "Peñalolén",
+  "Providencia",
+  "Pudahuel",
+  "Quilicura",
+  "Quinta Normal",
+  "Recoleta",
+  "Renca",
+  "San Joaquín",
+  "San Miguel",
+  "San Ramón",
+  "Vitacura",
+  "Puente Alto",
+  "Pirque",
+  "San José de Maipo",
+  "Colina",
+  "Lampa",
+  "Tiltil",
+  "San Bernardo",
+  "Buin",
+  "Calera de Tango",
+  "Paine",
+  "Melipilla",
+  "Alhué",
+  "Curacaví",
+  "María Pinto",
+  "San Pedro",
+  "Talagante",
+  "El Monte",
+  "Isla de Maipo",
+  "Padre Hurtado",
+  "Peñaflor"
 ];
 
+
+
 const Form = () => {
-  const [company, setCompany] = useState("Manpower");
+  const [company, setCompany] = useState("Viguez");
   const [rut, setRut] = useState("");
   const [rutError, setRutError] = useState(false);
-  const [timeError, setTimeError] = useState(false);
+  const [selectedTime, setSelectedTime] = useState("10:00");
+  const [birthDate, setBirthDate] = useState("");
+  const [onboardingDate, setOnboardingDate] = useState("");
 
-  useEffect(() => {
-    const hostname = window.location.hostname;
-
-    if (hostname.includes("manpower")) {
-      setCompany("Manpower");
-    } else if (hostname.includes("randstad")) {
-      setCompany("Randstad");
-    } else if (hostname.includes("viguez")) {
-      setCompany("Viguez");
-    } else {
-      setCompany("Manpower");
-    }
-  }, []);
+  
 
   const handleRutChange = (e) => {
     const formattedRut = formatRut(e.target.value);
@@ -102,16 +125,15 @@ const Form = () => {
   };
 
   const handleTimeChange = (e) => {
-    const time = e.target.value;
-    const isValid = validateTime(time);
-    setTimeError(!isValid);
+    setSelectedTime(e.target.value);
   };
 
-  const validateTime = (time) => {
-    const [hour, minute] = time.split(":").map(Number);
-    if (hour < 10 || (hour === 10 && minute < 30)) return false;
-    if (hour > 15 || (hour === 15 && minute > 0)) return false;
-    return true;
+  const handleBirthDateChange = (e) => {
+    setBirthDate(e.target.value);
+  };
+
+  const handleOnboardingDateChange = (e) => {
+    setOnboardingDate(e.target.value);
   };
 
   const formatRut = (rut) => {
@@ -124,13 +146,11 @@ const Form = () => {
   };
 
   const handleFormSubmit = (e) => {
-    if (rutError || timeError) {
+    if (rutError) {
       e.preventDefault();
       alert("Por favor corrige los errores antes de enviar el formulario.");
     }
   };
-
-  const CDN = process.env.NEXT_PUBLIC_CDN_GOOGLE;
 
   return (
     <div>
@@ -146,25 +166,12 @@ const Form = () => {
         >
           <input type="hidden" name="oid" value="00DKb000000OlrI" />
           <input type="hidden" name="retURL" value="http://tucar.app" />
-          <input
-            type="hidden"
-            id="recordType"
-            name="recordType"
-            value="012Kb000000wujF"
-          />
-          <input
-            type="hidden"
-            id="lead_source"
-            name="lead_source"
-            value="Staffing"
-          />
+          <input type="hidden" id="recordType" name="recordType" value="012Kb000000wujF" />
+          <input type="hidden" id="lead_source" name="lead_source" value="Staffing" />
           <input type="hidden" id="company" name="company" value={company} />
 
           <div className="mb-4">
-            <label
-              htmlFor="first_name"
-              className="block text-gray-700 font-Poppins font-medium"
-            >
+            <label htmlFor="first_name" className="block text-gray-700 font-Poppins font-medium">
               Nombre
             </label>
             <Input
@@ -175,15 +182,12 @@ const Form = () => {
               type="text"
               placeholder="Juan"
               className="mt-1 p-2 border rounded w-full"
-              required={true}
+              required
             />
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="last_name"
-              className="block text-gray-700 font-Poppins font-medium"
-            >
+            <label htmlFor="last_name" className="block text-gray-700 font-Poppins font-medium">
               Apellidos
             </label>
             <Input
@@ -194,15 +198,12 @@ const Form = () => {
               type="text"
               placeholder="Pérez"
               className="mt-1 p-2 border rounded w-full"
-              required={true}
+              required
             />
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="00NKb00000DQu1E"
-              className="block text-gray-700 font-Poppins font-medium"
-            >
+            <label htmlFor="00NKb00000DQu1E" className="block text-gray-700 font-Poppins font-medium">
               Identificador Nacional
             </label>
             <Input
@@ -216,40 +217,37 @@ const Form = () => {
               value={rut}
               onChange={handleRutChange}
               onBlur={handleRutBlur}
-              required={true}
+              required
             />
             {rutError && <ErrorMessage>Rut inválido</ErrorMessage>}
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="00NKb00000DQu1J"
-              className="block text-gray-700 font-Poppins font-medium"
-            >
+            <label htmlFor="00NKb00000DQu1J" className="block text-gray-700 font-Poppins font-medium">
               Fecha de Nacimiento
             </label>
             <Input
               id="00NKb00000DQu1J"
               name="00NKb00000DQu1J"
               size="12"
-              type="date"
+              type="text"
+              placeholder="DD/MM/AAAA"
+              value={birthDate}
+              onChange={handleBirthDateChange}
               className="mt-1 p-2 border rounded w-full"
-              required={true}
+              required
             />
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="00NKb00000DQu1Y"
-              className="block text-gray-700 font-Poppins font-medium"
-            >
+            <label htmlFor="00NKb00000DQu1Y" className="block text-gray-700 font-Poppins font-medium">
               Comuna de Residencia
             </label>
             <Select
               id="00NKb00000DQu1Y"
               name="00NKb00000DQu1Y"
               className="mt-1 p-2 border rounded w-full"
-              required={true}
+              required
             >
               <option value="" disabled selected>
                 Selecciona tu comuna
@@ -263,10 +261,7 @@ const Form = () => {
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="mobile"
-              className="block text-gray-700 font-Poppins font-medium"
-            >
+            <label htmlFor="mobile" className="block text-gray-700 font-Poppins font-medium">
               Celular
             </label>
             <Input
@@ -277,15 +272,12 @@ const Form = () => {
               type="text"
               placeholder="+56912345678"
               className="mt-1 p-2 border rounded w-full"
-              required={true}
+              required
             />
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="email"
-              className="block text-gray-700 font-Poppins font-medium"
-            >
+            <label htmlFor="email" className="block text-gray-700 font-Poppins font-medium">
               Email
             </label>
             <Input
@@ -296,54 +288,47 @@ const Form = () => {
               type="email"
               placeholder="correo@ejemplo.com"
               className="mt-1 p-2 border rounded w-full"
-              required={true}
+              required
             />
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="00NKb00000DRKXM"
-              className="block text-gray-700 font-Poppins font-medium"
-            >
+            <label htmlFor="00NKb00000DRKXM" className="block text-gray-700 font-Poppins font-medium">
               Fecha Cita Onboarding
             </label>
             <Input
               id="00NKb00000DRKXM"
               name="00NKb00000DRKXM"
               size="12"
-              type="date"
+              type="text"
+              placeholder="DD/MM/AAAA"
+              value={onboardingDate}
+              onChange={handleOnboardingDateChange}
               className="mt-1 p-2 border rounded w-full"
-              required={true}
+              required
             />
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="00NKb00000DRKZ8"
-              className="block text-gray-700 font-Poppins font-medium"
-            >
-              Hora Onboarding
+            <label htmlFor="00NKb00000DRQGv" className="block text-gray-700 font-Poppins font-medium">
+              Hora de citación
             </label>
-            <Input
-              id="00NKb00000DRKZ8"
-              name="00NKb00000DRKZ8"
-              placeholder="HH:MM"
-              size="12"
-              type="time"
+            <Select
+              id="00NKb00000DRQGv"
+              name="00NKb00000DRQGv"
               className="mt-1 p-2 border rounded w-full"
-              required={true}
-              min="10:30"
-              max="15:00"
+              required
+              value={selectedTime}
               onChange={handleTimeChange}
-            />
-            {timeError && <ErrorMessage>Hora inválida (10:30 - 15:00)</ErrorMessage>}
+            >
+              <option value="">--None--</option>
+              <option value="AM - 10:00">AM - 10:00</option>
+              <option value="PM - 15:30">PM - 15:30</option>
+            </Select>
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="00NKb00000DRPLG"
-              className="block text-gray-700 font-Poppins font-medium"
-            >
+            <label htmlFor="00NKb00000DRPLG" className="block text-gray-700 font-Poppins font-medium">
               ¿Posee Cuenta Uber?
             </label>
             <input
@@ -356,10 +341,7 @@ const Form = () => {
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="00NKb00000DRPLL"
-              className="block text-gray-700 font-Poppins font-medium"
-            >
+            <label htmlFor="00NKb00000DRPLL" className="block text-gray-700 font-Poppins font-medium">
               ¿Cuenta Uber Activa?
             </label>
             <input
@@ -386,10 +368,11 @@ const Form = () => {
             </h1>
 
             <h3 className="font-Poppins font-medium text-[#5b5d71] text-[20px] mt-[25px] w-[480px]">
-            <ul className="list-disc mx-5">
+              <p>Recuerda que los requisitos son:</p>
+              <ul className="list-disc mx-5">
                 <li>+23 años.</li>
-                <li>Región metropolitana.</li>
-                <li>En caso de tener cuenta uber, que este activa</li>
+                <li>Región Metropolitana.</li>
+                <li>En caso de tener cuenta Uber, que esté activa</li>
               </ul>
             </h3>
           </div>
@@ -398,11 +381,11 @@ const Form = () => {
               spaceBetween={60}
               autoplay={{ delay: 1500, disableOnInteraction: false }}
               modules={[Autoplay]}
-              className="mySwiper  w-[650px] "
+              className="mySwiper w-[650px]"
               allowTouchMov="none"
             >
               <SwiperSlide>
-                <div className="mt-[2px]   ml-[85px] hover:cursor-pointer">
+                <div className="mt-[2px] ml-[85px] hover:cursor-pointer">
                   <img
                     src="nirox4shadow.png"
                     className="asolute"

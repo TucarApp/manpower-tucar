@@ -7,14 +7,15 @@ import FormnewMobile from "../components/FormnewMobile";
 function index() {
   return (
     <div className="mt-[25px]">
-      <Layout title="Manpower">
-        {/* <LeadForm /> */}
-        <div className="hidden md:hidden lg:inline 2xl:inline">
+      <Layout title="Viguez">
+       
+        <div className="hidden lg:inline 2xl:inline">
           <Form />
         </div>
-        <div className="lg:hidden 2xl:hidden">
+        <div className="inline lg:hidden 2xl:hidden">
           <FormnewMobile />
         </div>
+       
       </Layout>
     </div>
   );

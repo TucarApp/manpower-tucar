@@ -113,14 +113,14 @@ function FooterNew({ variant = MODE.light, dark }) {
                 Precios
               </p>
             </a>
-            <a href="https://tucar.app/plan-premium">
+            <a href="https://tucar.app/plan-compartido">
               <p className=" text-[#5B5D71] text-[20px] font-medium font-Poppins hover">
-                Plan Eléctrico Premium
+                Plan Compartido
               </p>
             </a>
-            <a href="https://tucar.app/plan-plus">
+            <a href="https://tucar.app/plan-carga-nocturna">
               <p className=" text-[#5B5D71] text-[20px] font-medium font-Poppins">
-                Plan Eléctrico Plus
+                Plan Carga Nocturna
               </p>
             </a>
             <a href="https://tucar.app/beneficios">

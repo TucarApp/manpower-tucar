@@ -165,16 +165,16 @@ function FooterMobileNew({ variant = MODE.light, dark }) {
                         </a>
                       </div>
                       <div>
-                        <a href="https://tucar.app/plan-premium">
+                        <a href="https://tucar.app/plan-compartido">
                           <p className="text-[#5b5d71] hover:cursor-pointer">
-                            Plan eléctrico Premium
+                            Plan Compartido
                           </p>
                         </a>
                       </div>
                       <div>
-                        <a href="https://tucar.app/plan-plus">
+                        <a href="https://tucar.app/plan-carga-nocturna">
                           <p className="text-[#5b5d71] hover:cursor-pointer">
-                            Plan eléctrico Plus
+                            Plan Carga Nocturna
                           </p>
                         </a>
                       </div>
